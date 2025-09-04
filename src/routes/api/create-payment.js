@@ -20,7 +20,7 @@ router.post("/create-payment", async (req, res) => {
         pay_currency: currency.toLowerCase(),
         order_id: `user123-${slug}`,
         order_description: `${planType} investment`,
-        ipn_callback_url: "https://yourdomain.com/api/ipn", // Replace with ngrok or live URL
+        ipn_callback_url: "sheldonglobalbackend-production.up.railway.app", // Replace with ngrok or live URL
         is_fixed_rate: true,
       }),
     });
