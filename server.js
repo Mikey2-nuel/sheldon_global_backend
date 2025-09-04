@@ -17,7 +17,11 @@ import investmentRoutes from "./src/routes/api/investment.js";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000", // or "*" for all origins
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 const __filename = fileURLToPath(import.meta.url);
